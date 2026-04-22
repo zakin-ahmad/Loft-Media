@@ -1,33 +1,34 @@
-import Cursor from './components/Cursor'
-import Preloader from './components/Preloader'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import StatsBar from './components/StatsBar'
-import Ticker from './components/Ticker'
-import Services from './components/Services'
-import About from './components/About'
-import WhyUs from './components/WhyUs'
-import Portfolio from './components/Portfolio'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+import Home from "./pages/Home"
+import OurTools from "./pages/OurTools"
+import DigitalProducts from "./pages/DigitalProducts"
+import InhouseProduction from "./pages/InhouseProduction"
+
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import Cursor from "./components/Cursor"
+import Preloader from "./components/Preloader"
 
 export default function App() {
   return (
-    <>
-      <Cursor/>
+    <BrowserRouter>
+      
+      {/* Global UI (always visible) */}
+      <Cursor />
       <Preloader />
       <Navbar />
-      <main>
-        <Hero />
-        <StatsBar />
-        <Ticker />
-        <Services />
-        <About />
-        <WhyUs />
-        <Portfolio />
-        <Contact />
-      </main>
+
+      {/* Pages */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/tools" element={<OurTools />} />
+        <Route path="/products" element={<DigitalProducts />} />
+        <Route path="/production" element={<InhouseProduction />} />
+      </Routes>
+
       <Footer />
-    </>
+
+    </BrowserRouter>
   )
 }

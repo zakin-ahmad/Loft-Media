@@ -21,12 +21,12 @@ export default function WhyUs() {
     }, [])
 
     return (
-        <section id="why" ref={ref} className="bg-loft-bg py-20 px-6 md:px-12">
+        <section id="why" ref={ref} className="bg-loft-bg py-16 md:py-20 px-6 md:px-12">
             <div className="mb-16 reveal">
                 <span className="text-[10px] tracking-[0.25em] uppercase text-gold border border-gold/20 px-4 py-1.5 inline-block mb-5">
                     Why LF Loft
                 </span>
-                <h2 className="font-syne font-extrabold text-5xl md:text-6xl tracking-tight">The Loft Difference</h2>
+                <h2 className="font-syne font-extrabold text-3xl md:text-5xl tracking-tight">The Loft Difference</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gold/[0.04] reveal">

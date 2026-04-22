@@ -48,7 +48,7 @@ export default function Hero() {
 
                 {/* Badge */}
                 <div
-                    className="inline-flex items-center gap-2 px-5 py-2 border border-gold/20 bg-gold/5
+                    className="inline-flex items-center gap-2 px-3 md:px-5 py-2 border border-gold/20 bg-gold/5
             text-[10px] tracking-[0.22em] uppercase text-gold mb-8 animate-slideUp"
                     style={{ animationDelay: '1.8s' }}
                 >
@@ -58,9 +58,9 @@ export default function Hero() {
 
                 {/* Headline */}
                 <h1
-                    className="font-syne font-extrabold leading-none tracking-tight mb-7 animate-slideUp"
+                    className="font-syne font-extrabold  leading-none tracking-tight mb-7 animate-slideUp"
                     style={{
-                        fontSize: 'clamp(52px, 9vw, 100px)',
+                        fontSize: 'clamp(33px, 6vw, 100px)',
                         letterSpacing: '-0.02em',
                         animationDelay: '2s',
                     }}
@@ -72,7 +72,7 @@ export default function Hero() {
 
                 {/* Sub */}
                 <p
-                    className="text-lg md:text-xl text-white/50 font-light leading-relaxed max-w-xl mx-auto mb-12 animate-slideUp"
+                    className="text-sm md:text-xl text-white/50 font-light leading-relaxed max-w-xl mx-auto mb-12 animate-slideUp"
                     style={{ animationDelay: '2.2s' }}
                 >
                     LF Loft Media engineers cinematic content, AI-driven production pipelines, and scalable digital ecosystems for brands that demand excellence.
@@ -80,12 +80,12 @@ export default function Hero() {
 
                 {/* CTAs */}
                 <div
-                    className="flex gap-4 justify-center flex-wrap animate-slideUp"
+                    className="flex justify-center gap-4 flex-wrap animate-slideUp"
                     style={{ animationDelay: '2.4s' }}
                 >
                     <button
                         onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="font-syne font-bold text-[13px] tracking-[0.1em] uppercase px-10 py-4
+                        className="font-syne font-bold text-[10px] md:text-[13px] tracking-[0.1em] uppercase px-5 md:px-10 py-4
               bg-gold text-loft-bg hover:bg-gold-light transition-all duration-300
               hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(201,168,76,0.3)]"
                     >
@@ -93,7 +93,7 @@ export default function Hero() {
                     </button>
                     <button
                         onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="font-syne font-semibold text-[13px] tracking-[0.1em] uppercase px-10 py-4
+                        className="font-syne font-semibold text-[10px] md:text-[13px] tracking-[0.1em] uppercase px-5 md:px-10 py-4
               border border-gold/25 text-white/80 hover:border-gold hover:text-gold
               transition-all duration-300 hover:-translate-y-1"
                     >
@@ -104,11 +104,11 @@ export default function Hero() {
 
             {/* Scroll indicator */}
             <div
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2
+                className="absolute bottom-10  -translate-x-1/2 flex flex-col items-center gap-2
           text-[9px] tracking-[0.22em] uppercase text-white/20 animate-slideUp"
                 style={{ animationDelay: '2.8s' }}
             >
-                <div className="w-px h-12 bg-gradient-to-b from-gold to-transparent animate-pulse-dot" />
+                <div className="w-px h-12 bg-gradient-to-b mx-auto text-center from-gold to-transparent animate-pulse-dot" />
                 Scroll
             </div>
         </section>

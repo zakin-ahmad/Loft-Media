@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const CARDS = [
     {
@@ -44,74 +45,93 @@ const CARDS = [
 
 export default function Services() {
     const ref = useRef(null)
+    const navigate = useNavigate()
+
+    const ROUTES = ['/tools', '/products', '/production']
 
     useEffect(() => {
         const obs = new IntersectionObserver(entries => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') })
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('visible')
+            })
         }, { threshold: 0.12 })
+
         ref.current?.querySelectorAll('.reveal').forEach(el => obs.observe(el))
         return () => obs.disconnect()
     }, [])
 
-    return (
-        <section id="services" ref={ref} className="bg-loft-bg py-20 px-6 md:px-12">
-            {/* Header */}
-            <div className="text-center mb-20 reveal">
-                <span className="text-[10px] tracking-[0.25em] uppercase text-gold border border-gold/20 px-4 py-1.5 inline-block mb-5">
-                    Core Services
-                </span>
-                <h2 className="font-syne font-extrabold text-5xl md:text-6xl tracking-tight mb-5">What We Build</h2>
-                <p className="text-white/50 font-light text-lg max-w-lg mx-auto leading-relaxed">
-                    Three verticals. One integrated system. Engineered for scale, designed for impact.
-                </p>
-            </div>
+    // onKeyDown = {(e) => if (e.key === 'Enter') navigate(ROUTES[i])}
 
-            {/* Grid */}
-            <div className="grid bg-loft-bg grid-cols-1 md:grid-cols-3 gap-6 bg-gold/[0.06]">
-                {CARDS.map((card, i) => (
-                    <div
-                        key={card.num}
-                        data-hover
-                        className={`reveal reveal-d${i + 1} card-scan hover-glow
-              relative bg-loft-surface border border-gold/[0.06] p-10 md:p-8
-              group transition-all duration-500 hover:-translate-y-2 hover:border-gold/20
-              hover:bg-loft-surface2 overflow-hidden`}
-                    >
-                        {/* Hover overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-gold/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+return (
+    <section id="services" ref={ref} className="bg-loft-bg py-16 md:py-20 px-6 md:px-12">
+        {/* Header */}
+        <div className="text-center mb-16 md:mb-20 reveal">
+            <span className="text-[10px] tracking-[0.25em] uppercase text-gold border border-gold/20 px-4 py-1.5 inline-block mb-5">
+                Core Services
+            </span>
+            <h2 className="font-syne font-extrabold text-3xl md:text-5xl tracking-tight mb-5">
+                What We Build
+            </h2>
+            <p className="text-white/50 font-light text-sm md:text-lg max-w-lg mx-auto leading-relaxed">
+                Three verticals. One integrated system. Engineered for scale, designed for impact.
+            </p>
+        </div>
 
-                        <span className="text-[10px] tracking-[0.22em] uppercase text-white/25 mb-8 block relative">
-                            {card.num} / Our Tools
-                        </span>
+        {/* Grid */}
+        <div className="grid bg-loft-bg grid-cols-1 md:grid-cols-3 gap-6 bg-gold/[0.06]">
+            {CARDS.map((card, i) => (
+                <div
+                    key={card.num}
+                    onClick={() => navigate(ROUTES[i])}
+                    role="button"
+                    tabIndex={0}
+                    data-hover
+                    className={`reveal reveal-d${i + 1} card-scan hover-glow
+        relative bg-loft-surface border border-gold/[0.06] p-4 md:p-8
+        group transition-all duration-500 hover:-translate-y-2 hover:border-gold/20
+        hover:bg-loft-surface2 overflow-hidden cursor-pointer`}
+                >
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-gold/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                        <div className="w-14 h-14 border border-gold/20 flex items-center justify-center mb-7 relative
-              group-hover:border-gold/50 group-hover:bg-gold/[0.06] transition-all duration-300">
-                            {card.icon}
-                        </div>
+                    <span className="text-[10px] tracking-[0.22em] uppercase text-white/25 mb-8 block relative">
+                        {card.num} / Our Tools
+                    </span>
 
-                        <h3 className="font-syne font-bold text-2xl mb-4 relative leading-snug">{card.title}</h3>
-                        <p className="text-white/45 text-[14px] leading-[1.8] font-light mb-8 relative">{card.desc}</p>
+                    <div className="w-14 h-14 border border-gold/20 flex items-center justify-center mb-7 relative
+        group-hover:border-gold/50 group-hover:bg-gold/[0.06] transition-all duration-300">
+                        {card.icon}
+                    </div>
 
-                        <div className="flex flex-wrap gap-2 mb-10 relative">
-                            {card.tags.map(tag => (
-                                <span
-                                    key={tag}
-                                    className="text-[9px] tracking-[0.12em] uppercase px-3 py-1.5
+                    <h3 className="font-syne font-bold text-2xl mb-4 relative leading-snug">
+                        {card.title}
+                    </h3>
+
+                    <p className="text-white/45 text-sm md:text-[14px] leading-[1.8] font-light mb-8 relative">
+                        {card.desc}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 mb-10 relative">
+                        {card.tags.map(tag => (
+                            <span
+                                key={tag}
+                                className="text-[9px] tracking-[0.12em] uppercase px-3 py-1.5
                     border border-white/[0.06] text-white/30
                     group-hover:border-gold/20 group-hover:text-white/50 transition-all duration-300"
-                                >
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-
-                        <div className="flex items-center gap-3 text-[10px] tracking-[0.2em] uppercase text-gold relative">
-                            <div className="w-8 h-px bg-gold group-hover:w-12 transition-all duration-300" />
-                            {card.cta}
-                        </div>
+                            >
+                                {tag}
+                            </span>
+                        ))}
                     </div>
-                ))}
-            </div>
-        </section>
-    )
+
+                    {/* CTA (now just visual, click handled by parent) */}
+                    <div className="flex items-center gap-3 text-[10px] tracking-[0.2em] uppercase text-gold relative">
+                        <div className="w-8 h-px bg-gold group-hover:w-12 transition-all duration-300" />
+                        {card.cta}
+                    </div>
+                </div>
+            ))}
+        </div>
+    </section>
+)
 }

@@ -14,7 +14,7 @@ export default function Preloader() {
         transition-all duration-700 ${hidden ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
         >
             <p
-                className="font-syne font-extrabold text-3xl tracking-widest text-gold animate-fadeUp"
+                className="font-syne text-center font-extrabold text-2xl md:text-3xl tracking-widest text-gold animate-fadeUp"
                 style={{ animationDelay: '0.3s' }}
             >
                 LF LOFT MEDIA

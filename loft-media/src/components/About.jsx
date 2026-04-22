@@ -20,7 +20,7 @@ export default function About() {
 
     return (
         <section id="studio" ref={ref}
-            className="border-t border-b border-gold/[0.06] py-20 px-6 md:px-12">
+            className="border-t border-b border-gold/[0.06] py-16 md:py-20 px-6 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center max-w-7xl mx-auto">
 
                 {/* Visual */}
@@ -52,7 +52,7 @@ export default function About() {
                         About the Studio
                     </span>
                     <h2 className="font-syne font-extrabold leading-tight tracking-tight mb-6"
-                        style={{ fontSize: 'clamp(32px, 4vw, 52px)' }}>
+                        style={{ fontSize: 'clamp(30px, 4vw, 52px)' }}>
                         We Are Not An Agency.<br />We Are a System.
                     </h2>
                     <p className="text-white/45 font-light leading-relaxed text-[15px] mb-10">
