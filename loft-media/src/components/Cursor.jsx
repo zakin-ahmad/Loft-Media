@@ -52,12 +52,12 @@ export default function Cursor() {
         <>
             <div
                 ref={dot}
-                className="fixed w-2 h-2 bg-gold rounded-full pointer-events-none z-[9999] transition-transform duration-100"
+                className="fixed w-2 h-2 bg-primary rounded-full pointer-events-none z-[9999] transition-transform duration-100"
                 style={{ top: 0, left: 0 }}
             />
             <div
                 ref={ring}
-                className="fixed w-8 h-8 border border-gold/50 rounded-full pointer-events-none z-[9998] transition-[transform,opacity] duration-150"
+                className="fixed w-8 h-8 border border-primary/50 rounded-full pointer-events-none z-[9998] transition-[transform,opacity] duration-150"
                 style={{ top: 0, left: 0 }}
             />
         </>

@@ -1,16 +1,65 @@
-# React + Vite
+# LF Loft Media — Frontend System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, cinematic, component-driven web experience built with **React.js + Vite + Tailwind CSS**, designed for a creative media studio focusing on AI systems, digital products, and in-house production.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Overview
 
-## React Compiler
+LF Loft Media is a multi-page frontend system that represents a digital production studio. The website is structured around four core verticals:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- AI Tools & Automation  
+- Digital Products  
+- In-house Production  
+- Brand Story & Portfolio  
 
-## Expanding the ESLint configuration
+It uses a modular component architecture with advanced UI interactions like custom cursor, scroll animations, and parallax effects.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧠 Tech Stack
+
+- React.js (Frontend framework)
+- Vite (Build tool)
+- Tailwind CSS (Styling system)
+- React Router DOM (Routing)
+- React Icons (Icons)
+- Intersection Observer API (Scroll animations)
+- Custom CSS animations (cursor, ticker, preloader)
+
+---
+
+## 📁 Project Structure
+
+📁 src/
+│
+├── 📁 components/
+│ │
+│ ├── 📁 other-pages/
+│ │ ├── CtaBanner.jsx
+│ │ ├── FaqAccordion.jsx
+│ │ ├── PageHero.jsx
+│ │ ├── PricingCard.jsx
+│ │ └── TestimonialRaw.jsx
+│ │
+│ ├── Navbar.jsx
+│ ├── Hero.jsx
+│ ├── Services.jsx
+│ ├── WhyUs.jsx
+│ ├── StatsBar.jsx
+│ ├── Portfolio.jsx
+│ ├── About.jsx
+│ ├── Contact.jsx
+│ ├── Footer.jsx
+│ ├── Cursor.jsx
+│ ├── Preloader.jsx
+│ └── Ticker.jsx
+│
+├── 📁 pages/
+│ ├── Home.jsx
+│ ├── OurTools.jsx
+│ ├── DigitalProducts.jsx
+│ └── InhouseProduction.jsx
+│
+├── App.jsx
+└── main.jsx

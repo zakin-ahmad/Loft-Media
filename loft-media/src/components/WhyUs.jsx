@@ -21,27 +21,35 @@ export default function WhyUs() {
     }, [])
 
     return (
-        <section id="why" ref={ref} className="bg-loft-bg py-16 md:py-20 px-6 md:px-12">
+        <section id="why" ref={ref} className="bg-bg py-16 md:py-20 px-6 md:px-12">
             <div className="mb-16 reveal">
-                <span className="text-[10px] tracking-[0.25em] uppercase text-gold border border-gold/20 px-4 py-1.5 inline-block mb-5">
+                <span className="text-[10px] tracking-[0.25em] uppercase text-primary border border-primary/30 px-4 py-1.5 inline-block mb-5">
                     Why LF Loft
                 </span>
-                <h2 className="font-syne font-extrabold text-3xl md:text-5xl tracking-tight">The Loft Difference</h2>
+                <h2 className="font-syne font-extrabold text-2xl md:text-4xl tracking-tight text-text">
+                    The Loft Difference
+                </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gold/[0.04] reveal">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 reveal">
                 {ITEMS.map((item) => (
                     <div
                         key={item.n}
                         data-hover
-                        className="relative bg-loft-bg p-10 md:p-12 group hover:bg-loft-surface transition-colors duration-400 overflow-hidden"
+                        className="relative bg-surface p-10 md:p-12 group hover:bg-surface2 transition-colors duration-400 overflow-hidden border border-white/5 hover:border-primary/30"
                     >
-                        <span className="absolute top-6 right-6 font-syne font-extrabold text-6xl text-white/[0.03]
-              group-hover:text-gold/[0.06] transition-colors duration-400 leading-none select-none">
+                        <span className="absolute top-6 right-6 font-syne font-extrabold text-6xl text-primary/10
+              group-hover:text-blue/10 transition-colors duration-400 leading-none select-none">
                             {item.n}
                         </span>
-                        <h3 className="font-syne font-bold text-lg mb-3 relative">{item.title}</h3>
-                        <p className="text-white/40 text-[13px] leading-[1.8] font-light relative">{item.text}</p>
+
+                        <h3 className="font-syne font-bold text-lg mb-3 relative text-text">
+                            {item.title}
+                        </h3>
+
+                        <p className="text-muted text-[13px] leading-[1.8] font-light relative">
+                            {item.text}
+                        </p>
                     </div>
                 ))}
             </div>

@@ -23,17 +23,23 @@ export default function TestimonialRow() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {TESTIMONIALS.map((t) => (
-        <div key={t.name} className="bg-loft-surface p-6 md:p-10 flex flex-col gap-5">
+        <div key={t.name} className="bg-surface p-6 md:p-10 flex flex-col gap-5 border border-soft">
+          
           <div className="flex gap-1">
             {Array(t.rating).fill(0).map((_, i) => (
-              <span key={i} className="text-gold text-sm">★</span>
+              <span key={i} className="text-primary text-sm">★</span>
             ))}
           </div>
-          <p className="text-white/50 text-[14px] font-light leading-[1.85] italic">"{t.text}"</p>
-          <div className="mt-auto pt-5 border-t border-gold/[0.07]">
-            <p className="font-syne font-bold text-sm">{t.name}</p>
-            <p className="text-white/30 text-[11px] tracking-wide mt-0.5">{t.role}</p>
+
+          <p className="text-muted text-[14px] font-light leading-[1.85] italic">
+            "{t.text}"
+          </p>
+
+          <div className="mt-auto pt-5 border-t border-soft">
+            <p className="font-syne font-bold text-sm text-text">{t.name}</p>
+            <p className="text-dim text-[11px] tracking-wide mt-0.5">{t.role}</p>
           </div>
+
         </div>
       ))}
     </div>
