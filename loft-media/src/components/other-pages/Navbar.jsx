@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi'
 import { useLocation } from 'react-router-dom'
+import { Link } from "react-router-dom";
+
+import HomeNavBar from '../HomeNavBar'   // import HomeNavBar
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false)
@@ -16,7 +19,7 @@ export default function Navbar() {
 
     const getLinks = () => {
         switch (location.pathname) {
-            case '/':
+            case '/ai-house':
                 return ['Services', 'Studio', 'Work', 'Contact']
 
             case '/tools':
@@ -35,18 +38,23 @@ export default function Navbar() {
 
     const links = getLinks()
 
+     // HOME ROUTE: render HomeNavBar instead of this navbar
+    if (location.pathname === '/') {
+        return <HomeNavBar />
+    }
+
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-[100] h-[72px] flex items-center justify-between
-        px-6 md:px-12 backdrop-blur-xl transition-all duration-300
+        px-6 md:px-12 glass rounded-full transition-all duration-300
         border-b ${scrolled ? 'border-primary/20 bg-bg/90' : 'border-soft bg-bg/80'}`}
         >
             {/* Logo */}
-            <a href="/">
+            <Link to="/">
                 <span className="font-syne font-extrabold text-lg tracking-widest text-primary">
                     LF LOFT
                 </span>
-            </a>
+            </Link>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex gap-9">

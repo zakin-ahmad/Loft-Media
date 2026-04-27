@@ -58,7 +58,7 @@ export default function Hero() {
                 <div
                     className="inline-flex items-center gap-2 px-3 md:px-5 py-2 border border-primary/30 bg-primary/10
             text-[10px] tracking-[0.22em] uppercase text-primary mb-8 animate-slideUp"
-                    style={{ animationDelay: '1.8s' }}
+                    style={{ animationDelay: '0s' }}
                 >
                     <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-dot" />
                     AI-Powered Creative Studio — Islamabad
@@ -70,7 +70,7 @@ export default function Hero() {
                     style={{
                         fontSize: 'clamp(28px, 6vw, 100px)',
                         letterSpacing: '-0.02em',
-                        animationDelay: '2s',
+                        animationDelay: '1s',
                     }}
                 >
                     We Build<br />
@@ -81,7 +81,7 @@ export default function Hero() {
                 {/* Sub */}
                 <p
                     className="text-sm md:text-xl text-muted font-light leading-relaxed max-w-xl mx-auto mb-12 animate-slideUp"
-                    style={{ animationDelay: '2.2s' }}
+                    style={{ animationDelay: '1.2s' }}
                 >
                     LF Loft Media engineers cinematic content, AI-driven production pipelines, and scalable digital ecosystems for brands that demand excellence.
                 </p>
@@ -89,7 +89,7 @@ export default function Hero() {
                 {/* CTAs */}
                 <div
                     className="flex justify-center gap-4 flex-wrap animate-slideUp"
-                    style={{ animationDelay: '2.4s' }}
+                    style={{ animationDelay: '1.4s' }}
                 >
                     <button
                         onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}

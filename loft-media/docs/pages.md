@@ -1,8 +1,22 @@
 # Pages Documentation
 
-This project consists of four main pages, each representing a core vertical of LF Loft Media. Each page is composed using reusable UI components.
+This project consists of **five main pages**, each representing a core vertical of LF Loft Media. Each page is built using reusable UI components and optimized with **React lazy loading (Suspense + Preloader fallback)** for performance.
 
 ---
+
+# ⚡ Lazy Loading System
+
+All pages are loaded using React lazy loading to improve performance and reduce initial bundle size.
+
+### Implementation:
+
+```jsx
+<Suspense fallback={<Preloader />}>
+  <Routes>
+    ...
+  </Routes>
+</Suspense>
+```
 
 ## 1. Home.jsx
 
@@ -108,6 +122,7 @@ Highlight full-scale production capabilities.
 
 ```jsx
 <Route path="/" element={<Home />} />
+<Route path="/ai-house" element={<AIPage />} />
 <Route path="/tools" element={<OurTools />} />
 <Route path="/products" element={<DigitalProducts />} />
 <Route path="/production" element={<InhouseProduction />} />

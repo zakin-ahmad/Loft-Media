@@ -148,8 +148,9 @@ Initial loading animation screen.
 ### Features
 - Brand animation
 - Scan line effect
-- Auto-dismiss after delay
+- Auto-dismiss after delay (if used)
 - Fade-out transition
+- Used as Suspense fallback in lazy loading system
 
 ---
 
@@ -165,7 +166,50 @@ Scrolling keyword marquee.
 
 ---
 
-## 🎨 Design System (UPDATED)
+## 13. HomeCard.jsx (NEW)
+
+### Purpose
+Reusable card component used in **Home.jsx** to navigate to different studio divisions.
+
+### Features
+- Clickable navigation card
+- Glassmorphism styling
+- Hover glow effect (purple/blue theme)
+- Icon + title + description layout
+- Feature list display
+- Route-based navigation integration
+
+---
+
+## 14. HomeHero.jsx (NEW)
+
+### Purpose
+Hero section specifically designed for the new Home page.
+
+### Features
+- Simplified landing hero layout
+- Clean headline + CTA structure
+- Subtle gradient background effects
+- Focused on directing users to AI and 3D divisions
+- Smooth entrance animations
+
+---
+
+## 15. HomeNavBar.jsx (NEW)
+
+### Purpose
+Navigation bar used specifically in Home page context.
+
+### Features
+- Simplified version of main Navbar
+- Division-focused navigation links
+- Lightweight layout for landing page
+- Smooth scroll interactions
+- Responsive mobile menu
+
+---
+
+# 🎨 Design System (UPDATED)
 
 - Dark premium UI system
 - Background layers: `bg / bg2 / bg3`
@@ -180,7 +224,7 @@ Scrolling keyword marquee.
 
 ---
 
-## ⚡ Animation System
+# ⚡ Animation System
 
 - IntersectionObserver → `reveal` class
 - Smooth hover glow transitions

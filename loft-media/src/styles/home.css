@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --bg: #06060f;
+  --text: #f0f0ff;
+
+  --purple: #7c58ff;
+  --purple-light: #a884ff;
+
+  --blue: #3882ff;
+  --blue-light: #60a5fa;
+
+  --glass: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.1);
+}
+
+/* Global */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Headings */
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(120deg, var(--purple-light), var(--blue-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow Effects */
+.glow-purple {
+  box-shadow: 0 20px 60px rgba(124, 88, 255, 0.25);
+}
+
+.glow-blue {
+  box-shadow: 0 20px 60px rgba(56, 130, 255, 0.25);
+}
+
+/* Glass Card */
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 28px rgba(124,88,255,0.4);
+}
+
+/* Background Orbs */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(90px);
+  z-index: 0;
+}
+
+.orb-purple {
+  background: rgba(124,88,255,0.18);
+}
+
+.orb-blue {
+  background: rgba(56,130,255,0.14);
+}
